@@ -34,7 +34,7 @@
 
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
-        <url-pattern>/p/*</url-pattern>
+        <url-pattern>/test/*</url-pattern>
     </servlet-mapping>
 
 

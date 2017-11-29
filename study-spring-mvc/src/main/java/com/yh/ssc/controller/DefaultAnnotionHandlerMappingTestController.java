@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Create by yuanhaohy on 2017/11/11.
  */
 @Controller
-public class DemoController {
+public class DefaultAnnotionHandlerMappingTestController {
 
     @RequestMapping(value = "/demo")
     protected String handleRequest() throws Exception {

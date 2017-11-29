@@ -13,4 +13,27 @@
     <!-- 对转向页面的路径解析。prefix：前缀， suffix：后缀 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/views/" p:suffix=".jsp" />
 
+
+
+    <!--RequestMappingHandler-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping" />
+
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+    <!--<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />-->
+
+
+    <bean id="/beannametest" class="com.yh.ssc.controller.BeanNameUrlHandlerMappingTestController"></bean>
+    <bean id="simpleUrlHandlerMappingTestController" class="com.yh.ssc.controller.SimpleUrlHandlerMappingTestController" ></bean>
+
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/simpletest">simpleUrlHandlerMappingTestController</prop>
+            </props>
+        </property>
+    </bean>
 </beans>

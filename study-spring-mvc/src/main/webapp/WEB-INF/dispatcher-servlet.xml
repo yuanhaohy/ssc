@@ -36,4 +36,7 @@
             </props>
         </property>
     </bean>
+
+    <bean class="com.yh.ssc.mapping.SelfHandlerMapping"></bean>
+    
 </beans>
